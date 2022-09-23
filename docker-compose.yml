@@ -309,7 +309,7 @@ services:
 
 ### NGINX Server #########################################
     nginx:
-      image: petrofin-nginx
+      image: nginx
       build:
         context: ./nginx
         args:
