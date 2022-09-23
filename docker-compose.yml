@@ -11,7 +11,7 @@ services:
 
 ### Workspace Utilities ##################################
     workspace:
-      image: petrofin-workspace
+      image: workspace-php${PHP_VERSION}
       build:
         context: ./workspace
         args:
@@ -151,7 +151,7 @@ services:
 
 ### PHP-FPM ##############################################
     php-fpm:
-      image: petrofin-php-fpm
+      image: php-fpm-php${PHP_VERSION}
       build:
         context: ./php-fpm
         args:
@@ -258,7 +258,7 @@ services:
 
 ### PHP Worker ############################################
     php-worker:
-      image: petrofin-php-worker
+      image: php-worker-php${PHP_VERSION}
       build:
         context: ./php-worker
         args:
